@@ -1,0 +1,14 @@
+﻿body {
+	background-color: grey;
+}
+
+.well{
+	background-color: white;
+	width: 100%;
+max-width: 1000px;
+margin: 0 auto;
+}
+
+.alku{
+	margin-top: 50px;
+}
