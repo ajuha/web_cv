@@ -155,3 +155,37 @@ a.darken:hover span {
     -o-transition: all 0.2s linear;
     transition: all 0.2s linear;
 }
+
+
+#slideshow > div { 
+    position: absolute; 
+    top: 10px; 
+    left: 10px; 
+    right: 10px; 
+    bottom: 10px; 
+}
+
+  .bottom-align-text {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 5px;
+  }
+.oikealle-alas{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+.vasemmalle-alas{
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+}
+.kehys{
+    margin: 25px auto; 
+    position: relative; 
+    width: 100%; 
+    height: 300px; 
+    padding: 10px; 
+    box-shadow: 0 0 20px rgba(0,0,0,0.4); 
+}

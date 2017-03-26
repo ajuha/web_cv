@@ -47,8 +47,8 @@
 		</div>
 		<div class="col-sm-6">
             <div class="esittely">
-            <h1 class="pilklu">Juha Ahola</h1>
-            <h3 class="pilklu">Web-developer</h3>
+            <h1>Juha Ahola</h1>
+            <h3>Web-developer</h3>
                 </div>
 		</div>
       </div>
@@ -189,10 +189,9 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
+          <img class="block-center" src="img/hartonpizza.png">
         <h2 class="modal-title text-center" id="exampleModalLongTitle">Harton pizza</h2>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+        
       </div>
       <div class="modal-body">
         <p>Harton pizza oli koulun ensimmäinen tiimissä tehtävä projekti. Opimme siellä projektikäytäntöjä ja tekemään web ohjelman Javalla</p>
@@ -260,6 +259,76 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
           
           
       </div>
+      
+      <div id="kokemukset"class="well kokemukset">
+          <h2 class="text-center">Työ ja koulutus</h2>
+      
+      
+      <div class="row">
+
+            <div class="col-sm-6">
+<h3 class="text-center">Työkokemus</h3>
+                <div class="kehys">
+
+
+  <div class="tyokokemusSlide"><h3 class="text-center">Avecra Oy</h3>
+      <h4 class="text-center">08/2015 - Jatkuu</h4><hr>
+      <p><strong>Varastotyöntekijä</strong></p>
+      <p>Ravintolavaunujen lastaus Helsingin rautatieasemalla ja Ilmalan varikolla ja muita varastotehtäviä.</p>
+    
+
+</div>
+  <div class="tyokokemusSlide"><h3 class="text-center">Keslog Oy</h3>
+      <h4 class="text-center">06/2015 - 07/2015</h4><hr>
+      <p><strong>Äänikeräilijä</strong></p>
+      <p>Tuotteiden keräily äänikomentojen avulla.</p> </div>
+
+
+  
+
+                    <div class="bottom-align-text">
+<button onclick="vaihdaTyokokemus(-1)">&#10094;</button>
+  <button onclick="vaihdaTyokokemus(1)">&#10095;</button>
+                        </div>
+                    </div> <!-- kehys loppuu -->
+                    
+                </div>
+             <div class="col-sm-6">
+<h3 class="text-center">Koulutus</h3>
+                 
+                 <div class="kehys">
+
+
+  <div class="koulutusSlide"><h3 class="text-center">Haaga-Helia ammattikorkeakoulu</h3>
+      <h4 class="text-center">08/2014 - Jatkuu</h4><hr>
+      <p><strong>It-Tradenomi</strong></p>
+      <p>Suuntauduin ohjelmistokehitykseen, jossa mm. koodataan sovelluksia ryhmässä.</p>
+    
+
+</div>
+  <div class="koulutusSlide"><h3 class="text-center">Helmi liiketalousopisto</h3>
+      <h4 class="text-center">08/2009 - 05/2012</h4><hr>
+      <p><strong>Datanomi</strong></p>
+      <p>Monipuolinen IT-koulutus. Ensikosketus koodaamiseen täällä.</p> </div>
+
+
+  
+
+                    <div class="bottom-align-text">
+<button onclick="vaihdaKoulutus(-1)">&#10094;</button>
+  <button onclick="vaihdaKoulutus(1)">&#10095;</button>
+                        </div>
+                    </div> <!-- kehys loppuu -->
+                 
+            </div>
+
+
+
+
+    </div>
+      
+          </div>
+      
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -270,7 +339,40 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
     <!-- Plugin JavaScript -->
+<script>
+var slideIndex = 1;
+showTyokokemus(slideIndex);
+showKoulutus(slideIndex);
 
+function vaihdaTyokokemus(n) {
+  showTyokokemus(slideIndex += n);
+}
+    function vaihdaKoulutus(n) {
+  showKoulutus(slideIndex += n);
+}
 
+function showTyokokemus(n) {
+  var i;
+  var x = document.getElementsByClassName("tyokokemusSlide");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+    
+    
+    function showKoulutus(n) {
+  var i;
+  var x = document.getElementsByClassName("koulutusSlide");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
   </body>
 </html>
