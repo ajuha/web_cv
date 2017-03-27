@@ -28,6 +28,43 @@ p {
     font-size: 16px ;
 }
 
+@media only screen and (max-width : 979px) {
+h1 {
+  font-size: 50px ;
+}
+h2 {
+  font-size: 40px ;
+}
+h3 {
+    font-size: 20px ;
+}
+h4 {
+    font-size: 18px ;
+}
+p {
+    font-size: 14px ;
+}
+}
+
+@media only screen and (max-width : 480px) {
+h1 {
+  font-size: 45px ;
+}
+h2 {
+  font-size: 35px ;
+}
+h3 {
+    font-size: 18px ;
+}
+h4 {
+    font-size: 16px ;
+}
+p {
+    font-size: 12px ;
+}
+}
+
+
 
 .well{
     border-radius: 0px;
