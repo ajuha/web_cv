@@ -110,12 +110,14 @@ p {
 
 
 .well{
+    
     border-radius: 0px;
 	background-color: white;
 	width: 95%;
 max-width: 1000px;
 
 margin: 0 auto;
+    margin-top: 10px;
     border-bottom: 1px solid grey;
 }
 
@@ -160,8 +162,12 @@ margin: 0 auto;
        padding-top: 50px;
     padding-bottom: 50px; 
 }
-.portfolio{
+#portfolio{
           padding-top: 50px;
+    padding-bottom: 50px;  
+}
+#kokemukset{
+              padding-top: 50px;
     padding-bottom: 50px;  
 }
 
@@ -358,9 +364,14 @@ a, a:hover {
     margin-bottom:20px;
 }
 
+.active span.glyphicon {
+    color: black;
+}
 
 
-
-
+.footer{
+    margin-top: 100px;
+    background-color: white;
+}
 
 
