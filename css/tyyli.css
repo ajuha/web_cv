@@ -2,6 +2,22 @@ body {
 	background-image: url(../img/background2.png);
     font-family: 'Ubuntu', sans-serif;
 }
+.mobiilinavigointi{
+    margin: 10px;
+}
+
+.fixedElement {
+    background-color: white;
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:100;
+    padding-top:5px;
+    border-bottom: 1px solid black;
+    display:none;
+}
+
+
 
 .h1, .h2, h1, h2{
     font-family: 'Amatic SC', cursive;
@@ -27,7 +43,9 @@ h4 {
 p {
     font-size: 16px ;
 }
-
+span.glyphicon {
+    font-size: 50px;
+}
 @media only screen and (max-width : 979px) {
 h1 {
   font-size: 50px ;
@@ -44,6 +62,10 @@ h4 {
 p {
     font-size: 14px ;
 }
+    span.glyphicon {
+    font-size: 40px;
+}
+ 
 }
 
 @media only screen and (max-width : 480px) {
@@ -62,7 +84,28 @@ h4 {
 p {
     font-size: 12px ;
 }
+    
+    
 }
+
+
+
+@media only screen and (max-width : 767px) {
+
+
+    .navigointi{
+        display:none
+    }
+    .fixedElement{
+        display: inline;
+    }
+    span.glyphicon {
+    font-size: 35px;
+}
+    
+}
+
+
 
 
 
@@ -183,6 +226,9 @@ a.darken {
     overflow: hidden;
     text-align: center;
     max-width:300px;
+    margin-bottom: 20px;
+    border: 5px solid darkgreen;
+    border-radius: 5px;
 }
 a.darken img {
     width: 100%;
@@ -271,7 +317,6 @@ input, textarea{width: 100%;}
 .btn-success{background-color: darkgreen !important;}
 
 span.glyphicon {
-    font-size: 5vw;
     color: darkgreen;
 }
 
@@ -309,6 +354,9 @@ a, a:hover {
           transform: rotate(10deg);
 }
 
+.portfolio-item{
+    margin-bottom:20px;
+}
 
 
 
