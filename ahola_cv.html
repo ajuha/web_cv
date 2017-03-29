@@ -42,7 +42,7 @@
               <a class="mobiilinavigointi page-scroll" href="#osaaminen"><span class="glyphicon glyphicon-tasks linkki" aria-hidden="true"></span></a>
             <a class="mobiilinavigointi page-scroll" href="#portfolio"><span class="glyphicon glyphicon-star linkki" aria-hidden="true"></span></a>
     <a class="mobiilinavigointi page-scroll" href="#kokemukset"><span class="glyphicon glyphicon-education linkki" aria-hidden="true"></span></a>
-    <a class="mobiilinavigointi page-scroll" href="#chat"><span class="glyphicon glyphicon-bullhorn linkki" aria-hidden="true"></span></a>
+    <a class="mobiilinavigointi page-scroll" href="#otayhteytta"><span class="glyphicon glyphicon-bullhorn linkki" aria-hidden="true"></span></a>
           </div>
       
       
@@ -61,6 +61,7 @@
             <h1>Juha Ahola</h1>
             <h3>Web-developer</h3>
                 <a target="_blank" href="https://www.linkedin.com/in/juha-ahola-862781101/"><img class="linkedin" alt="follow me on linkedin" src="img/linkedin.png" border=0></a>
+                <a target="_blank" href="https://github.com/ajuha"><img class="linkedin" alt="follow me on linkedin" src="img/github.png" border=0></a>
                 </div>
 		</div>
       </div>
@@ -102,10 +103,10 @@
           <h2 class="text-center">Minusta</h2>
           <div class="row">
               <div class="col-sm-7">
-      <h3>Hello, I am web designer</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <h3>Moi!</h3>
+                  
+          <p>Opiskelen tietotekniikkaa Haaga-Helian ammattikorkeakoulussa ja etsin työharjoittelupaikkaa ohjelmistokehittäjänä. Lue CV:ni läpi ja ota yhteyttä jos kiinnostuit!</p>
+                  <p>Harrastan aktiivisesti kuntosalilla käyntiä ja satunnaisesti lenkkeilyä</p>
       </div>
               <div class="col-sm-5">
               <table class="table borderless">
@@ -184,9 +185,6 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
     <div class="modal-content">
       <div class="modal-header">
         <h2 class="modal-title text-center" id="exampleModalLongTitle">Fiilissivu</h2>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
       </div>
       <div class="modal-body">
         <p>Fiilissivun ideana oli kerätä opiskelijoiden mielialoja, jotta voidaan seurata millainen fiilis heillä jäi oppitunnista.</p>
@@ -210,7 +208,6 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-          <img class="block-center" src="img/hartonpizza.png">
         <h2 class="modal-title text-center" id="exampleModalLongTitle">Harton pizza</h2>
         
       </div>
@@ -235,12 +232,10 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
     <div class="modal-content">
       <div class="modal-header">
         <h2 class="modal-title text-center" id="exampleModalLongTitle">Harton pizza</h2>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+
       </div>
       <div class="modal-body">
-        <p>Tämä oli yksilötyö, jossa käytin ekaa kertaa jQueryä. Kokeile itse <a href="http://myy.haaga-helia.fi/~a1402956/">tästä</a></p>
+        <p>Tämä oli yksilötyö, jossa käytin ekaa kertaa jQueryä. Kokeile itse <a target="_blank"href="http://myy.haaga-helia.fi/~a1402956/"><button class="btn btn-success">tästä</button></a></p>
 
           
           
@@ -289,57 +284,84 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 
             <div class="col-sm-6">
 <h3 class="text-center">Työkokemus</h3>
-                <div class="kehys">
 
 
-  <div class="tyokokemusSlide"><h3 class="text-center">Avecra Oy</h3>
+
+<ul class="slides">
+    <input type="radio" name="radio-btn" id="slide1" checked />
+    <li class="slide-container">
+		<div class="slide">
+      <h3 class="text-center">Avecra Oy</h3>
       <h4 class="text-center">08/2015 - Jatkuu</h4><hr>
       <p><strong>Varastotyöntekijä</strong></p>
       <p>Ravintolavaunujen lastaus Helsingin rautatieasemalla ja Ilmalan varikolla ja muita varastotehtäviä.</p>
-    
+        </div>
+		<div class="nav">
+			<label for="slide1" class="prev">&#x2039;</label>
+			<label for="slide2" class="next">&#x203a;</label>
+		</div>
+    </li>
 
-</div>
-  <div class="tyokokemusSlide"><h3 class="text-center">Keslog Oy</h3>
+    <input type="radio" name="radio-btn" id="slide2" />
+    <li class="slide-container">
+        <div class="slide">
+          <h3 class="text-center">Keslog Oy</h3>
       <h4 class="text-center">06/2015 - 07/2015</h4><hr>
       <p><strong>Äänikeräilijä</strong></p>
-      <p>Tuotteiden keräily äänikomentojen avulla.</p> </div>
+      <p>Tuotteiden keräily äänikomentojen avulla.</p>
+        </div>
+		<div class="nav">
+			<label for="slide1" class="prev">&#x2039;</label>
+			<label for="slide2" class="next">&#x203a;</label>
+		</div>
+    </li>
 
 
-  
-
-                    <div class="bottom-align-text">
-<button class="btn btn-success" onclick="vaihdaTyokokemus(-1)">&#10094;</button>
-  <button class="btn btn-success" onclick="vaihdaTyokokemus(1)">&#10095;</button>
-                        </div>
-                    </div> <!-- kehys loppuu -->
+    <li class="nav-dots">
+      <label for="slide1" class="nav-dot" id="img-dot-1"></label>
+      <label for="slide2" class="nav-dot" id="img-dot-2"></label>
+    </li>
+</ul>
                     
                 </div>
              <div class="col-sm-6">
 <h3 class="text-center">Koulutus</h3>
                  
-                 <div class="kehys">
-
-
-  <div class="koulutusSlide"><h3 class="text-center">Haaga-Helia ammattikorkeakoulu</h3>
+                 <ul class="slides">
+    <input type="radio" name="radio-btn2" id="slide3" checked />
+    <li class="slide-container">
+		<div class="slide">
+      <h3 class="text-center">Haaga-Helia ammattikorkeakoulu</h3>
       <h4 class="text-center">08/2014 - Jatkuu</h4><hr>
       <p><strong>It-Tradenomi</strong></p>
       <p>Suuntauduin ohjelmistokehitykseen, jossa mm. koodataan sovelluksia ryhmässä.</p>
-    
+        </div>
+		<div class="nav">
+			<label for="slide3" class="prev">&#x2039;</label>
+			<label for="slide4" class="next">&#x203a;</label>
+		</div>
+    </li>
 
-</div>
-  <div class="koulutusSlide"><h3 class="text-center">Helmi liiketalousopisto</h3>
+    <input type="radio" name="radio-btn2" id="slide4" />
+    <li class="slide-container">
+        <div class="slide">
+          <h3 class="text-center">Helmi liiketalousopisto</h3>
       <h4 class="text-center">08/2009 - 05/2012</h4><hr>
       <p><strong>Datanomi</strong></p>
-      <p>Monipuolinen IT-koulutus. Ensikosketus koodaamiseen täällä.</p> </div>
+      <p>Monipuolinen IT-koulutus. Ensikosketus koodaamiseen täällä.</p>
+        </div>
+		<div class="nav">
+			<label for="slide3" class="prev">&#x2039;</label>
+			<label for="slide4" class="next">&#x203a;</label>
+		</div>
+    </li>
 
 
-  
-
-                    <div class="bottom-align-text">
-<button class="btn btn-success" onclick="vaihdaKoulutus(-1)">&#10094;</button>
-  <button class="btn btn-success" onclick="vaihdaKoulutus(1)">&#10095;</button>
-                        </div>
-                    </div> <!-- kehys loppuu -->
+    <li class="nav-dots">
+      <label for="slide3" class="nav-dot" id="img-dot-3"></label>
+      <label for="slide4" class="nav-dot" id="img-dot-4"></label>
+    </li>
+</ul>
                  
             </div>
 
@@ -413,41 +435,7 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
     
     
     
-var slideIndex = 1;
-showTyokokemus(slideIndex);
-showKoulutus(slideIndex);
 
-function vaihdaTyokokemus(n) {
-  showTyokokemus(slideIndex += n);
-}
-    function vaihdaKoulutus(n) {
-  showKoulutus(slideIndex += n);
-}
-
-function showTyokokemus(n) {
-  var i;
-  var x = document.getElementsByClassName("tyokokemusSlide");
-  if (n > x.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";  
-  }
-  x[slideIndex-1].style.display = "block";  
-}
-    
-    
-    function showKoulutus(n) {
-  var i;
-  var x = document.getElementsByClassName("koulutusSlide");
-  if (n > x.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";  
-  }
-  x[slideIndex-1].style.display = "block";  
-}
-    
-    
     
     
     
@@ -553,10 +541,9 @@ $("#chat").append("<p><strong>"+ nimi  + ":</strong> " + viesti +  "</p>");
 }
     
     
+
     
-    
-    
-    
+
 
 </script>
   </body>

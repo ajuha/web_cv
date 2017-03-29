@@ -162,11 +162,16 @@ margin: 0 auto;
        padding-top: 50px;
     padding-bottom: 50px; 
 }
-#portfolio{
+.portfolio{
           padding-top: 50px;
     padding-bottom: 50px;  
 }
-#kokemukset{
+.kokemukset{
+              padding-top: 50px;
+    padding-bottom: 50px;  
+}
+
+.otayhteytta{
               padding-top: 50px;
     padding-bottom: 50px;  
 }
@@ -345,6 +350,8 @@ a, a:hover {
 }
 
 .linkedin {
+    max-width:60px;
+    margin: 10px;
   -webkit-transition: all 0.5s ease;
      -moz-transition: all 0.5s ease;
        -o-transition: all 0.5s ease;
@@ -372,6 +379,140 @@ a, a:hover {
 .footer{
     margin-top: 100px;
     background-color: white;
+}
+
+
+
+
+
+
+
+
+
+.slides {
+        margin: 25px auto; 
+    position: relative; 
+    width: 100%; 
+    height: 300px; 
+    padding: 5px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4); 
+}
+
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.slides input { display: none; }
+
+.slide-container { display: block; }
+
+.slide {
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    min-height:300px;
+    display: block;
+    position: absolute;
+
+    transform: scale(0);
+
+    transition: all .7s ease-in-out;
+}
+
+
+
+.nav label {
+    width: 100px;
+    display: none;
+    position: absolute;
+    bottom: 0px;
+	  opacity: 0;
+    z-index: 9;
+    cursor: pointer;
+
+    transition: opacity .2s;
+
+    color: black;
+    font-size: 55pt;
+    text-align: center;
+    line-height: 80px;
+    font-family: "Varela Round", sans-serif;
+    background-color: rgba(255, 255, 255, .3);
+    text-shadow: 0px 0px 15px rgb(119, 119, 119);
+}
+
+.slide:hover + .nav label { opacity: 0.5; }
+
+.nav label:hover { opacity: 1; }
+
+.nav .next { right: 0; }
+
+input:checked + .slide-container  .slide {
+    opacity: 1;
+
+    transform: scale(1);
+
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .nav label { display: block; }
+
+.nav-dots {
+	width: 100%;
+	bottom: 9px;
+	height: 11px;
+	display: block;
+	position: absolute;
+	text-align: center;
+}
+
+.nav-dots2 {
+	width: 100%;
+	bottom: 9px;
+	height: 11px;
+	display: block;
+	position: absolute;
+	text-align: center;
+}
+
+.nav-dots2 .nav-dot {
+	top: -5px;
+	width: 11px;
+	height: 11px;
+	margin: 0 4px;
+	position: relative;
+	border-radius: 100%;
+	display: inline-block;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.nav-dots .nav-dot {
+	top: -5px;
+	width: 11px;
+	height: 11px;
+	margin: 0 4px;
+	position: relative;
+	border-radius: 100%;
+	display: inline-block;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.nav-dots .nav-dot:hover {
+	cursor: pointer;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+input#slide1:checked ~ .nav-dots label#img-dot-1,
+input#slide2:checked ~ .nav-dots label#img-dot-2,
+input#slide3:checked ~ .nav-dots label#img-dot-3,
+input#slide4:checked ~ .nav-dots label#img-dot-4
+ {
+	background: rgba(0, 0, 0, 1);
 }
 
 
