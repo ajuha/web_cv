@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../../favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Ubuntu" rel="stylesheet">
+
+  <title>Juha Ahola CV</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/tyyli.css" rel="stylesheet">
+
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+
+
+
+
+
+  <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+  <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.co    m/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+</head>
+
+<body>
+
+  <!-- <div id="fixedMenu" class="fixedElement text-center">
+    <a class="mobiilinavigointi page-scroll active" href="#minusta"><span class="glyphicon glyphicon-user linkki" aria-hidden="true"></span></a>
+    <a class="mobiilinavigointi page-scroll" href="#osaaminen"><span class="glyphicon glyphicon-tasks linkki" aria-hidden="true"></span></a>
+    <a class="mobiilinavigointi page-scroll" href="#portfolio"><span class="glyphicon glyphicon-star linkki" aria-hidden="true"></span></a>
+    <a class="mobiilinavigointi page-scroll" href="#kokemukset"><span class="glyphicon glyphicon-education linkki" aria-hidden="true"></span></a>
+    <a class="mobiilinavigointi page-scroll" href="#otayhteytta"><span class="glyphicon glyphicon-bullhorn linkki" aria-hidden="true"></span></a>
+    </div> -->
+
+
+
+
+
+
+  <div class="well alku">
+
+    <div class="row inner">
+      <div class="col-sm-6 text-center">
+        <img class="pyorea" src="img/profiili.png">
+      </div>
+      <div class="col-sm-6 text-center">
+        <div class="esittely">
+          <h1>Juha Ahola</h1>
+          <h3>Web-developer</h3>
+          <a target="_blank" href="https://www.linkedin.com/in/juha-ahola-862781101/"><img class="linkedin"
+              alt="follow me on linkedin" src="img/linkedin.png" border=0></a>
+          <a target="_blank" href="https://github.com/ajuha"><img class="linkedin" alt="follow me on github"
+              src="img/github.png" border=0></a>
+          <!--<a target="_blank" href="https://www.youtube.com/channel/UCFHRsURzFFQLjnY-0CdN5Nw"><img class="linkedin" alt="follow me on youtube" src="img/youtube.png" border=0></a>
+                -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="minusta" class="well minusta">
+    <h2 class="text-center">Koronatilasto-analyysi</h2>
+    <div class="row">
+      <div class="col-sm-12">
+        <h3>Moi!</h3>
+
+        <p>Analysoin tilastoja ja tarkistan faktoja koronaan liittyen </p>
+        <h1>Kuolleisuus taulukko</h1>
+        
+        <table>
+          <td>
+            <tr>asd</tr>
+            <tr>666</tr>
+          </td>
+        </table>
+        
+        <table id='kuolleisuusTaulukko'> 
+          <!-- HEADING FORMATION -->
+
+          <tr> 
+              <th>Viikko</th> 
+              <th>Kuolleita</th> 
+          </tr> 
+
+        
+          </table>
+      </div>
+
+
+    </div>
+
+
+
+
+  </div>
+
+  <div class="well footer">
+    (c) Juha Ahola
+  </div>
+
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <!-- jQuery -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.validate.js"></script>
+
+
+  <!-- Bootstrap Core JavaScript -->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
+
+  <script>
+
+    $(document).on("scroll", onScroll);
+
+
+    function enableButton() {
+      $('.submit').prop("disabled", false);
+    }
+
+    $(function () {
+      $('a.page-scroll').bind('click', function (event) {
+        $(document).off("scroll");
+        var $anchor = $(this);
+
+
+        $('a').each(function () {
+          $(this).removeClass('active');
+        })
+
+        $(this).addClass('active');
+
+        var target = this.hash,
+          menu = target;
+        $target = $(target);
+        $('html, body').stop().animate({
+          'scrollTop': $target.offset().top
+        }, 500, 'swing', function () {
+          window.location.hash = target;
+          $(document).on("scroll", onScroll);
+        });
+
+
+
+
+
+      });
+    });
+
+
+    function onScroll(event) {
+      var scrollPos = $(document).scrollTop();
+      $('#fixedMenu a').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+          $('#fixedMenu a').removeClass("active");
+          currLink.addClass("active");
+        }
+        else {
+          currLink.removeClass("active");
+        }
+      });
+    }
+
+
+/*     $.getJSON('https://pxdata.stat.fi:443/PxWeb/api/v1/fi/Kokeelliset_tilastot/vamuu_koke/koeti_vamuu_pxt_12ng.px', function(data) {
+    //do stuff with your data here
+    console.log(data);
+}); */
+
+var jsonQuery = {
+  "query": [
+    {
+      "code": "Alue",
+      "selection": {
+        "filter": "item",
+        "values": [
+          "SSS"
+        ]
+      }
+    },
+    {
+      "code": "Viikko",
+      "selection": {
+        "filter": "item",
+        "values": [
+          "2023W49",
+          "2023W50",
+          "2023W51",
+          "2023W52",
+          "2024W01",
+          "2024W02"
+        ]
+      }
+    },
+    {
+      "code": "Ikä",
+      "selection": {
+        "filter": "item",
+        "values": [
+          "SSS"
+        ]
+      }
+    },
+    {
+      "code": "Sukupuoli",
+      "selection": {
+        "filter": "item",
+        "values": [
+          "SSS"
+        ]
+      }
+    }
+  ],
+  "response": {
+    "format": "json-stat2"
+  }
+};
+
+$(document).ready(function () {
+    $.ajax({ 
+        type: 'POST', 
+        url: 'https://pxdata.stat.fi:443/PxWeb/api/v1/fi/Kokeelliset_tilastot/vamuu_koke/koeti_vamuu_pxt_12ng.px', 
+        data: JSON.stringify(jsonQuery),
+        success: function (data) { 
+            console.log(data);
+            var i = 0;
+            $.each(data, function(key, value){
+
+                var kuolleisuusRivi = document.createElement('tr');
+                kuolleisuusRivi.className = 'kuolleisuusRivi';
+                kuolleisuusRivi.innerHTML =
+                  '<tr><td>' + Object.keys(data.dimension.Viikko.category.label)[i] + '</td>' +
+                  '<td>' + data.value[i] + '</td></tr>';
+                document.getElementById('kuolleisuusTaulukko').appendChild(kuolleisuusRivi);
+
+
+
+
+              console.log(Object.keys(data.dimension.Viikko.category.label)[i])
+
+              console.log(data.value[i])
+              i++;
+
+              
+            })
+        }
+    });
+});
+    
+
+
+/* fetch('https://pxdata.stat.fi:443/PxWeb/api/v1/fi/Kokeelliset_tilastot/vamuu_koke/koeti_vamuu_pxt_12ng.px').then(res=> {
+  return res.json();
+})
+.then(data => {
+  console.log(data);
+}) */
+
+
+//const queryString = new URLSearchParams(queryParams).toString();
+
+
+
+  </script>
+</body>
+
+</html>
